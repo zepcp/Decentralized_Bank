@@ -1,7 +1,7 @@
 pragma solidity ^0.4.19;
 
-//The aim of decentralized_bank contract is to provide your wallet the ultimate backup, the seleccio
-basic feature...
+//The aim of decentralized_bank contract is to provide your wallet the ultimate backup in case of non-activity for a period of time.
+contract decentralized_bank {
 	
 	//Event writes on log file to enable alert to listeners
 	event willExecuted(address account);
@@ -10,10 +10,10 @@ basic feature...
 	uint totalSupply;
 	
 	struct account {
-      address heir;
-      uint lastAction;
-      uint nbDays;
-    }
+		address heir;
+		uint lastAction;
+		uint nbDays;
+	}
 	
 	//Mapping is a dictionary, relating (A => B)
 	mapping (address => account) addressToAccount;
