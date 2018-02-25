@@ -1,0 +1,25 @@
+{
+  "name": "decentralized_bank",
+  "version": "1.0.0",
+  "description": "Ultimate Backup in Case of Wallet Non-Activity",
+  "keywords": [
+    "truffle",
+    "testrpc",
+    "ethereum",
+    "web3",
+    "solidity"
+  ],
+  "scripts": {
+    "test": "truffle test"
+  },
+  "author": {
+    "name": "José Pereira",
+    "email": "zepcp@hotmail.com",
+    "url": "https://github.com/zepcp"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "truffle-contract": "^3.0.3",
+    "web3": "^0.19.1"
+  }
+}
