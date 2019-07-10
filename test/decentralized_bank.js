@@ -3,7 +3,7 @@ const Web3 = require('web3')
 const web3 = new Web3(new Web3.providers.HttpProvider("http://localhost:8545")) // Hardcoded development port
 
 var lastAction = 365;
-var heir = '0x2f5a842f2202bd73d4c698ddba8cb8a803943655';
+var heir = '0x3db82142DC5857b30741FfFA87dF09dCe9D21B7F';
 var amount = 10;
 var send = 2;
 
@@ -33,8 +33,7 @@ const mineBlock = function () {
   })
 }
 
-contract('decentralizedBank', function(BalanceOf) {
-    
+contract('decentralizedBank', function(BalanceOf) {    
   it("Take1 - Deposit", async function() {
     //Create Account / 1st Deposit
     let MyBank = await decentralizedBank.deployed();
@@ -42,7 +41,7 @@ contract('decentralizedBank', function(BalanceOf) {
     check_balance = await MyBank.checkAccount();
     assert.equal(await amount, check_balance[0], "KO - Balance Not Correct");
     console.log("Take1 - Deposit - " + await MyBank.checkAccount());
-});
+  });
     
   it("Take2 - Transfer", async function() {
     //Transfer Funds
